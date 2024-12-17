@@ -1,0 +1,761 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Smart Trade</title>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+
+        <!-- CSS
+        ============================================ -->
+       <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
+        <link rel="stylesheet" href="assets/css/vendor/flaticon/flaticon.css">
+        <link rel="stylesheet" href="assets/css/vendor/slick.css">
+        <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+        <link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
+        <link rel="stylesheet" href="assets/css/vendor/sal.css">
+        <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/vendor/base.css">
+        <link rel="stylesheet" href="assets/css/style.min.css">
+        
+        
+         <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/nivo-slider/css/nivo-slider.css">
+    <link rel="stylesheet" href="libs/nivo-slider/css/animate.css">
+    <link rel="stylesheet" href="libs/nivo-slider/css/style.css">
+    <link rel="stylesheet" href="libs/font-material/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="libs/slider-range/css/jslider.css">
+    <link rel="stylesheet" href="libs/owl-carousel/assets/owl.carousel.min.css">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reponsive.css">
+     <link rel="stylesheet" href="assets/css/vendor/notification.css">
+
+       <style>
+        #slider-range {
+            margin: 20px 0;
+            width: 100%;
+        }
+         .flex-center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .amount-range {
+            width: 150px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+    </head>
+
+
+    <body class="sticky-header user-register blog" onload="loadData();">
+        <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+        <a href="#top" class="back-to-top" id="backto-top"><i class="fal fa-arrow-up"></i></a>
+        
+        <header>
+
+        <!-- header left mobie -->
+        <div class="header-mobile d-md-none">
+            <div class="mobile hidden-md-up text-xs-center d-flex align-items-center justify-content-around">
+
+                <!-- menu left -->
+                <div id="mobile_mainmenu" class="item-mobile-top">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+
+                <!-- logo -->
+                <div class="mobile-logo">
+                    <a href="index-2.html">
+                        <img class="logo-mobile img-fluid" src="img/home/logo-mobie.png" alt="Prestashop_Furnitica">
+                    </a>
+                </div>
+
+                <!-- menu right -->
+                <div class="mobile-menutop" data-target="#mobile-pagemenu">
+                    <i class="zmdi zmdi-more"></i>
+                </div>
+            </div>
+
+            <!-- search -->
+            <div id="mobile_search" class="d-flex">
+                <div id="mobile_search_content">
+                    <form method="get" action="#">
+                      
+                        <a href="search.html"><input type="text" name="s" value="" placeholder="Advanced Search" style="cursor: pointer">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                        </button></a>
+                    </form>
+                </div>
+                <div class="desktop_cart">
+                    <div class="blockcart block-cart cart-preview tiva-toggle">
+                        <div class="header-cart tiva-toggle-btn">
+                            
+                            <a href="product-cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- header desktop -->
+        <div class="header-top d-xs-none ">
+            <div class="container">
+                <div class="row">
+                    <!-- logo -->
+                    <div class="col-sm-2 col-md-2 d-flex align-items-center">
+                        <div id="logo">
+                            <a href="index.html">
+                                <img src="img/home/logo.png" alt="logo" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- menu -->
+                    <div class="col-sm-5 col-md-5 align-items-center justify-content-center navbar-expand-md main-menu">
+                        <div class="menu navbar collapse navbar-collapse">
+                            <ul class="menu-top navbar-nav">
+                                <li>
+                                    <a href="index.html" class="parent">Home</a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="blog-grid-no-sidebar.html" class="parent">Blog</a>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <a href="contact.html" class="parent">Contact US</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- search and acount -->
+                    <div class="col-sm-5 col-md-5 d-flex align-items-center justify-content-end" id="search_widget">
+                        <form method="get" action="#">
+
+                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                            <a href="search.html"><input type="text" name="s" value="" placeholder="Advanced Search" class="ui-autocomplete-input" autocomplete="off" style="cursor: pointer">
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button></a>
+                        </form>
+
+                        <div id="block_myaccount_infos" class="hidden-sm-down dropdown">
+                            <div class="myaccount-title ">
+                                <a href="#acount" data-toggle="collapse" class="acount">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>Account</span>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+
+                            <div id="acount" class="collapse">
+
+                                <div class="account-list-content">
+
+                                    <div>
+                                        <a class="login" href="user-acount.html" rel="nofollow" title="Log in to your customer account">
+                                            <i class="fa fa-cog"></i>
+                                            <span>My Account</span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="login" href="user-login.html" rel="nofollow" title="Log in to your customer account">
+                                            <i class="fa fa-sign-in"></i>
+                                            <span>Sign in</span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="register" href="user-register.html" rel="nofollow" title="Register Account">
+                                            <i class="fa fa-user"></i>
+                                            <span>Register Account</span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a class="check-out" href="product-checkout.html" rel="nofollow" title="Checkout">
+                                            <i class="fa fa-check" aria-hidden="true"></i>
+                                            <span>Checkout</span>
+                                        </a>
+                                    </div>
+                                    <div class="link_wishlist">
+                                        <a href="user-wishlist.html" title="My Wishlists">
+                                            <i class="fa fa-heart"></i>
+                                            <span>My Wishlists</span>
+                                        </a>
+                                    </div>
+                                  
+                                    <div id="desktop_language_selector" class="language-selector groups-selector hidden-sm-down">
+                                        <ul class="list-inline">
+                                            <li class="list-inline-itemcurrent">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/home/home1-flas.jpg" alt="English" width="16" height="11">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/home/home1-flas2.jpg" alt="Italiano" width="16" height="11">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/home/home1-flas3.jpg" alt="Français" width="16" height="11">
+                                                </a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="#">
+                                                    <img class="img-fluid" src="img/home/home1-flas4.jpg" alt="Español" width="16" height="11">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop_cart">
+                            <div class="blockcart block-cart cart-preview tiva-toggle">
+                                <div class="header-cart tiva-toggle-btn">
+                                   
+                                    <a href="product-cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                                </div>
+                                
+                                
+                              
+                                
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+        
+        
+        
+        <!-- End Header -->
+
+        <main class="main-wrapper" id="lt-search-main">
+
+
+            <!-- Start Shop Area  -->
+            <div class="axil-shop-area axil-section-gap bg-color-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="axil-shop-sidebar">
+                                <div class="d-lg-none">
+                                    <button class="sidebar-close filter-close-btn"><i class="fas fa-times"></i></button>
+                                </div>
+                                <div class="toggle-list product-categories active">
+                                    <h6 class="title">CATEGORY</h6>
+                                    <div class="shop-submenu">
+                                        <ul id="category-options">
+                                            <!--<li class="current-cat"><a href="#">Apple</a></li>-->
+                                            <li id="category-li"><a id="category-a">Apple</a></li>
+                                            <li><a>Samsung</a></li>
+                                            <li><a>Sony</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="toggle-list product-categories product-gender active">
+                                    <h6 class="title">CONDITION</h6>
+                                    <div class="shop-submenu">
+                                        <ul id="condition-options">
+                                            <!--<li class="chosen"><a href="#">New</a></li>-->
+                                            <li id="condition-li"><a id="condition-a">New</a></li>
+                                            <li><a>Used</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="toggle-list product-color active">
+                                    <h6 class="title">COLOR</h6>
+                                    <div class="shop-submenu">
+                                        <ul id="color-options">
+                                            <!--<li class="chosen" style="border-color: red;"><a style="background: red;" href="#" class="color-extra-02"></a></li>-->
+                                            <li style="border-color: red; " class="m-5" id="color-li"><a id="color-a" style="background: red;" class="color-extra-02"></a><a id="color-name" class="">White</a></li>
+                                            <li style="border-color: blue;"><a style="background: blue;" class="color-extra-02"></a></li>
+                                            <li style="border-color: gold;"><a style="background: gold;" class="color-extra-02"></a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="toggle-list product-size active">
+                                    <h6 class="title">Material</h6>
+                                    <div class="shop-submenu">
+                                        <ul id="material-options">
+                                            <!--<li class="chosen"><a href="#">128 GB</a></li>-->
+                                            <li id="material-li"><a id="material-a">128 GB</a></li>
+                                            <li><a>256 GB</a></li>
+                                            <li><a>512 GB</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                               
+
+
+                                <button class="axil-btn btn-bg-secondary" onclick="searchProducts(0);">Apply</button>
+                                <button class="axil-btn btn-bg-primary mt--10" onclick="resetpage();">Reset All</button>
+                            </div>
+                            <!-- End .axil-shop-sidebar -->
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="axil-shop-top mb--40">
+                                        <div class="category-select align-items-center justify-content-lg-end justify-content-between">
+                                            <!-- Start Single Select  -->
+                                            <span class="filter-results">Showing 1-10 of 20 results</span>
+                                            <select class="single-select" id="st-sort">
+                                                <option>Short by Latest</option>
+                                                <option>Short by Oldest</option>
+                                                <option>Short by Name</option>
+                                                <option>Short by Price</option>
+                                               
+                                            </select>
+                                            <!-- End Single Select  -->
+                                        </div>
+                                        <div class="d-lg-none">
+                                            <button class="product-filter-mobile filter-toggle"><i class="fas fa-filter"></i> FILTER</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End .row -->
+                             <div class="tab-content product-items">
+                                            <div id="grid" class="related tab-pane fade in active show">
+                                                <div class="row" id="st-product-container">
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    <div class="item text-center col-md-4" id="st-product">
+                                                        <div class="product-miniature js-product-miniature item-one first-item">
+                                                            <div class="thumbnail-container border">
+                                                                <a href="product-detail.html" id="st-product-a1">
+                                                                    <img class="img-fluid image-cover" style="width: 400px; height: 250px;" src="img/product/1.jpg" id="st-product-img1" alt="img">
+                                                                    <img class="img-fluid image-secondary" style="width: 400px; height: 250px;" src="img/product/22.jpg" id="st-product-img2" alt="img">
+                                                                </a>
+                                                                <div class="highlighted-informations">
+                                                                    <div class="variant-links">
+                                                                        <a href="#" class="color beige" title="Beige"></a>
+                                                                        <a href="#" class="color orange" title="Orange"></a>
+                                                                        <a href="#" class="color green" title="Green"></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="product-description">
+                                                                <div class="product-groups">
+                                                                    <div class="product-title">
+                                                                        <a href="product-detail.html" id="st-product-title1">Nulla et justo non augue</a>
+                                                                    </div>
+                                                                     <div class="rating">
+                                                                            <div class="product-title">
+                                                                                <a id="st-product-condition" style="color: green">new</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    <div class="product-group-price">
+                                                                        <div class="product-price-and-shipping">
+                                                                            <span class="price" id="st-product-price1">£28.08</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-buttons d-flex justify-content-center">
+                                                                    <form action="#" method="post" class="formAddToCart">
+                                                                        <input type="hidden" name="id_product" value="1">
+                                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart" id="add-to-cart-Product">
+                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </form>
+                                                                    <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                    </a>
+                                                                    <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview" id="st-product-a2">
+                                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                  
+                                                </div>
+                                            </div>
+                                            
+<!--                                            second view-->
+                                           
+                                        </div>
+                            
+                            
+                            
+                            <div class="text-center pt--20" id="st-pagination-container">
+                                <a href="#" class="axil-btn btn-bg-primary ml--10" id="st-pagination-button">Prev</a>
+                                <a href="#" class="axil-btn btn-bg-primary">1</a>
+                                <a href="#" class="axil-btn btn-bg-primary">2</a>
+                                <a href="#" class="axil-btn btn-bg-primary">Next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End .container -->
+            </div>
+            <!-- End Shop Area  -->
+
+            
+        </main>
+
+
+      
+        <!-- Start Footer Area  -->
+         <footer class="footer-one">
+        <div class="inner-footer">
+            <div class="container">
+                <div class="footer-top col-lg-12 col-xs-12">
+                    <div class=" row">
+                        <div class="nov-html col-lg-4 col-sm-12 col-xs-12">
+                            <div class="block">
+                                <div class="block-content">
+                                    <p class="logo-footer">
+                                        <img src="img/home/logo.png" alt="img">
+                                    </p>
+                                    <p class="content-logo">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="block-content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Reasons to shop</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">What our customers say</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Meet the teaml</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Contact our buyers</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="block-content">
+                                    <p class="img-payment ">
+                                        <img class="img-fluid" src="img/home/payment-footer.png" alt="img">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nov-html col-lg-4 col-sm-6">
+                            <div class="block m-top">
+                                <div class="title-block">
+                                    Contact Us
+                                </div>
+                                <div class="block-content">
+                                    <div class="contact-us">
+                                        <div class="title-content">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>Address :</span>
+                                        </div>
+                                        <div class="content-contact address-contact">
+                                            <p>123 Suspendis matti, Visaosang Building VST District NY Accums, North American
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-us">
+                                        <div class="title-content">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <span>Email :</span>
+                                        </div>
+                                        <div class="content-contact mail-contact">
+                                            <p>support@domain.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-us">
+                                        <div class="title-content">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <span>Hotline :</span>
+                                        </div>
+                                        <div class="content-contact phone-contact">
+                                            <p>+0012-345-67890</p>
+                                        </div>
+                                    </div>
+                                    <div class="contact-us">
+                                        <div class="title-content">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <span>Opening Hours :</span>
+                                        </div>
+                                        <div class="content-contact hours-contact">
+                                            <p>Monday - Sunday / 08.00AM- 19.00</p>
+                                            <span>(Except Holidays)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tiva-modules col-lg-4 col-md-6">
+                            <div class="block m-top">
+                                <div class="block-content">
+                                    <div class="title-block">Newsletter</div>
+                                    <div class="sub-title">Sign up to our newsletter to get the latest articles, lookbooks voucher codes direct
+                                        to your inbox
+                                    </div>
+                                    <div class="block-newsletter">
+                                        <form action="#" method="post">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="email" value="" placeholder="Enter Your Email">
+                                                <span class="input-group-btn">
+                                                    <button class="effect-btn btn btn-secondary " name="submitNewsletter" type="submit">
+                                                        <span>subscribe</span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <input type="hidden" name="action" value="0">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block m-top1">
+                                <div class="block-content">
+                                    <div class="social-content">
+                                        <div class="title-block">
+                                            Follow us on
+                                        </div>
+                                        <div id="social-block">
+                                            <div class="social">
+                                                <ul class="list-inline mb-0 justify-content-end">
+                                                    <li class="list-inline-item mb-0">
+                                                        <a href="#" target="_blank">
+                                                            <i class="fa fa-facebook"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item mb-0">
+                                                        <a href="#" target="_blank">
+                                                            <i class="fa fa-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item mb-0">
+                                                        <a href="#" target="_blank">
+                                                            <i class="fa fa-google"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item mb-0">
+                                                        <a href="#" target="_blank">
+                                                            <i class="fa fa-instagram"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block m-top1">
+                                <div class="block-content">
+                                    <div class="payment-content">
+                                        <div class="title-block">
+                                            Payment accept
+                                        </div>
+                                        <div class="payment-image">
+                                            <img class="img-fluid" src="img/home/payment.png" alt="img">
+                                        </div>
+                                    </div>
+                                    <!-- Popup newsletter -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tiva-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center col-lg-12 ">
+                        <span>
+                            <a target="_blank" href="https://www.templateshub.net">Templates Hub</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- End Footer Area  -->
+
+        <!-- Header Search Modal End -->
+        <div class="header-search-modal" id="header-search-modal">
+            <button class="card-close sidebar-close"><i class="fas fa-times"></i></button>
+            <div class="header-search-wrap">
+                <div class="card-header">
+                    <form action="#">
+                        <div class="input-group">
+                            <input type="search" class="form-control" name="prod-search" id="prod-search" placeholder="Search">
+                            <button type="submit" class="axil-btn btn-bg-primary"><i class="far fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <div class="search-result-header">
+                        <h6 class="title">1 Result Found</h6>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="psearch-results">
+                        <div class="axil-product-list">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="./assets/images/product/product-03.png" alt="Product Image-1">
+                                </a>
+                            </div>
+                            <div class="product-content">
+
+                                <h6 class="product-title"><a href="#">Product Title-1</a></h6>
+                                <div class="product-price-variant">
+                                    <span class="price current-price">Rs. 0.00</span>
+                                </div>
+                                <div class="product-cart">
+                                    <a href="#" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
+                                    <a href="#" class="cart-btn"><i class="fal fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Search Modal End -->
+
+
+
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-content-wrap">
+                <div class="cart-header">
+                    <h2 class="header-title">Cart Review</h2>
+                    <button class="cart-close sidebar-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="cart-body">
+                    <ul class="cart-item-list">
+                        <li class="cart-item">
+                            <div class="item-img">
+                                <a href="#"><img src="assets/images/product/product-01.png" alt="Product Image-1"></a>
+                                <button class="close-btn"><i class="fas fa-times"></i></button>
+                            </div>
+                            <div class="item-content">
+                                <h3 class="item-title"><a href="#">Product Title-1</a></h3>
+                                <div class="item-price"><span class="currency-symbol">Rs. </span>0.00</div>
+                                <div class="pro-qty item-quantity">
+                                    <input type="number" class="quantity-input" value="1">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cart-footer">
+                    <h3 class="cart-subtotal">
+                        <span class="subtotal-title">Subtotal:</span>
+                        <span class="subtotal-amount">Rs. 0.00</span>
+                    </h3>
+                    <div class="group-btn">
+                        <a href="#" class="axil-btn btn-bg-primary viewcart-btn">View Cart</a>
+                        <a href="#" class="axil-btn btn-bg-secondary checkout-btn">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS
+    ============================================ -->
+        <!-- Modernizer JS -->
+        <script src="assets/js/vendor/modernizr.min.js"></script>
+        <!-- jQuery JS -->
+        <script src="assets/js/vendor/jquery.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="assets/js/vendor/popper.min.js"></script>
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/vendor/slick.min.js"></script>
+        <script src="assets/js/vendor/js.cookie.js"></script>
+        <!-- <script src="assets/js/vendor/jquery.style.switcher.js"></script> -->
+        <script src="assets/js/vendor/jquery-ui.min.js"></script>
+        <script src="assets/js/vendor/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/js/vendor/jquery.countdown.min.js"></script>
+        <script src="assets/js/vendor/sal.js"></script>
+        <script src="assets/js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+        <script src="assets/js/vendor/counterup.js"></script>
+        <script src="assets/js/vendor/waypoints.min.js"></script>
+        
+        
+          <!-- Vendor JS -->
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/popper/popper.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="libs/nivo-slider/js/jquery.nivo.slider.js"></script>
+    <script src="libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="libs/slider-range/js/tmpl.js"></script>
+    <script src="libs/slider-range/js/jquery.dependClass-0.1.js"></script>
+    <script src="libs/slider-range/js/draggable-0.1.js"></script>
+    <script src="libs/slider-range/js/jquery.slider.js"></script>
+    
+
+        <!-- Main JS -->
+        <script src="js/main.js"></script>
+          <script src="js/Search.js"></script>
+     <script src="js/notification.js"></script>
+       <script src="js/theme.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    
+         <script>
+        $(document).ready(function() {
+            $('#slider-range').slider({
+                range: true,
+                min: 0,
+                max: 1000000,
+                values: [0, 1000000],
+                slide: function(event, ui) {
+                    $('#amount').val('Rs.' + ui.values[0] + '  Rs.' + ui.values[1]);
+                }
+            });
+            $('#amount').val('Rs.' + $('#slider-range').slider('values', 0) +
+                '  Rs.' + $('#slider-range').slider('values', 1));
+        });
+    </script>
+        
+    </body>
+
+</html>
