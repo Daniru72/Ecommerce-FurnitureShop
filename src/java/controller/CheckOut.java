@@ -154,10 +154,10 @@ public class CheckOut extends HttpServlet {
                  
                  //Start: Set Payment Date
                  
-                 String merchant_id ="1227325";
+                 String merchant_id ="****";
                  String formatedAmount = new DecimalFormat("0.00").format(amount);
                  String currency ="LKR";
-                 String merchanSecret ="Mjg3MjQ1OTUzMDQwMzQ0Njc3NTU0NDMzNDE2MDkxNjczNzEyNTI=";
+                 String merchanSecret ="******";
                  String merchanSecretMd5Hash = PayHere.generateMD5(merchanSecret);
                  
                    JsonObject payhere = new JsonObject();
