@@ -27,7 +27,7 @@ This is a Java-based Ecommerce Application for managing an online furniture shop
 ## Getting Started
 ### Prerequisites
 - **Java Development Kit (JDK)**: Version 8 or higher
-- **Database**: MySQL or PostgreSQL
+- **Database**: MySQL 
 - **Apache Maven**: For managing dependencies
 
 - ## Design
