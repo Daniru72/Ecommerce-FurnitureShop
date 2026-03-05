@@ -13,8 +13,8 @@ import javax.mail.internet.MimeMessage;
 
 public class Mail {
     
-    private static final String APP_EMAIL = "danirudahamneth72@gmail.com";
-    private static final String APP_PASSWORD = "nufj xiis igyx noas";
+    private static final String APP_EMAIL = "email";
+    private static final String APP_PASSWORD = "**** **** **** ****";
 
     public static void sendMail(String email, String subject, String content) {
 
